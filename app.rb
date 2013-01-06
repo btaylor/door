@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'sinatra'
+require 'bitly'
  
 post '/' do
   response =<<EOF
@@ -14,12 +15,16 @@ end
 
 post '/recordSuccess' do
   recordingUrl = params[:RecordingUrl]
+  
+  bitly = Bitly.new(ENV['BITLY_USERNAME'], ENV['BITLY_API_TOKEN'])
+  shortenedRecordingUrl = bitly.shorten(recordingUrl).jmp_url
+
   response =<<EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
   <Play>https://dl.dropbox.com/s/28uq7mlvuf4rw9f/come-on-in.wav?dl=1</Play>
   <Play>http://jetcityorange.com/dtmf/DTMF-9.mp3</Play>
-  <Sms from="+14156305155" to="+19098154939">Hey, I just let someone in the front door. #{recordingUrl}</Sms>
+  <Sms from="+14156305155" to="+19098154939">Hey, I just let someone in the front door. #{shortenedRecordingUrl}</Sms>
   <Hangup />
 </Response>
 EOF
