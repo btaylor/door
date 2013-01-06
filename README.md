@@ -14,3 +14,13 @@ recording, just in case the transcription sucks) letting them know.
 Testing
 ==
 - thin -R config.ru start
+
+Production
+==
+- Make sure to set the following environment variables, either via heroku
+  config:add or other means:
+  - `BITLY_USERNAME`: your bit.ly username
+  - `BITLY_API_TOKEN`: the bit.ly 2.0 API Key
+  - `TWILIO_SMS_FROM`: your twilio phone number
+  - `TWILIO_SMS_TO`: the phone number to SMS when the door is open
+

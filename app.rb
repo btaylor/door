@@ -24,7 +24,7 @@ post '/recordSuccess' do
 <Response>
   <Play>https://dl.dropbox.com/s/28uq7mlvuf4rw9f/come-on-in.wav?dl=1</Play>
   <Play>http://jetcityorange.com/dtmf/DTMF-9.mp3</Play>
-  <Sms from="+14156305155" to="+19098154939">Hey, I just let someone in the front door. #{shortenedRecordingUrl}</Sms>
+  <Sms from="#{ENV['TWILIO_SMS_FROM']}" to="#{ENV['TWILIO_SMS_TO']}">Hey, I just let someone in the front door. #{shortenedRecordingUrl}</Sms>
   <Hangup />
 </Response>
 EOF
