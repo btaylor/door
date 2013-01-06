@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'sinatra'
  
-get '/' do
+post '/' do
   response =<<EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
@@ -13,7 +13,7 @@ get '/' do
 EOF
 end
 
-get '/recordSuccess' do
+post '/recordSuccess' do
 response =<<EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
@@ -25,7 +25,7 @@ response =<<EOF
 EOF
 end
 
-get '/recordTimeout' do
+post '/recordTimeout' do
 response =<<EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
