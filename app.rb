@@ -6,10 +6,12 @@ post '/' do
   response =<<EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
-  <Pause length="3" />
+  <Pause length="5" />
   <Play>http://jetcityorange.com/dtmf/DTMF-2.mp3</Play>
   <Pause length="1" />
   <Play>http://jetcityorange.com/dtmf/DTMF-9.mp3</Play>
+  <Pause length="3" />
+  <Hangup />
 </Response>
 EOF
 end
