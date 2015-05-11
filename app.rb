@@ -7,8 +7,9 @@ post '/' do
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
   <Pause length="3" />
-  <Play>http://jetcityorange.com/dtmf/DTMF-7.mp3</Play>
-  <Play>http://jetcityorange.com/dtmf/DTMF-3.mp3</Play>
+  <Play>http://jetcityorange.com/dtmf/DTMF-2.mp3</Play>
+  <Pause length="1" />
+  <Play>http://jetcityorange.com/dtmf/DTMF-9.mp3</Play>
 </Response>
 EOF
 end
