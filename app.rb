@@ -7,9 +7,8 @@ post '/' do
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
   <Pause length="3" />
-  <Play>https://dl.dropbox.com/s/0wf9wok59b5koe2/hello.wav?dl=1</Play>
-  <Record timeout="2" maxLength="5" playBeep="false" action="/recordSuccess" />
-  <Redirect>/recordTimeout</Redirect>
+  <Play>http://jetcityorange.com/dtmf/DTMF-7.mp3</Play>
+  <Play>http://jetcityorange.com/dtmf/DTMF-3.mp3</Play>
 </Response>
 EOF
 end
